@@ -71,6 +71,8 @@ def get_lecture_summary(lecture: int) -> str:
     """指定した回（1始まりの整数）の講義の要点を返す。
 
     「第3回では何を学ぶ？」のように、回の内容や関係を聞かれたときに使う。
+    講義の内容、学習目標、演習テーマについて質問された場合は、
+    推測で回答せず、まずこのツールで該当する回の情報を確認すること。
     """
     path = DATA_DIR / "lectures" / f"{lecture:02d}.md"
     if not path.exists():
